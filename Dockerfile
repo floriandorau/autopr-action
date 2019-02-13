@@ -7,6 +7,8 @@ LABEL "com.github.actions.color"="blue"
 
 COPY . .
 
+RUN npm install --production
+
 ADD entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT [ "/entrypoint.sh" ]
