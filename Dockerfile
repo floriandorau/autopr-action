@@ -7,8 +7,6 @@ LABEL "com.github.actions.color"="blue"
 
 RUN apk add --no-cache git openssl
 
-COPY . /tmp/src/
+COPY . .
 
-RUN yarn global add "file:/tmp/src" && rm -rf /tmp/src
-
-ENTRYPOINT [ "autopr-action" ]
+ENTRYPOINT [ "./bin/autopr.js" ]
