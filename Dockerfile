@@ -5,6 +5,8 @@ LABEL "com.github.actions.description"="Automatically create pull requests"
 LABEL "com.github.actions.icon"="git-pull-request"
 LABEL "com.github.actions.color"="blue"
 
-COPY . ./tmp
+COPY . .
 
-ENTRYPOINT [ "./tmp/bin/autopr.js" ]
+ADD entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT [ "./entrypoint.sh" ]
