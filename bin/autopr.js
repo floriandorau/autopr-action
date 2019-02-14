@@ -16,10 +16,10 @@ const main = () => {
                 console.error(e);
             }
         }).finally(() => {
-            console.log(`Process exited with code:${process.exitCode || 0}`);
+            console.log(`Process exited with code: '${process.exitCode || 0}'`);
         })
 }
 if (require.main === module) {
-    console.info(`Running autpr in version:'${package.version}'`);
+    console.info(`Running autpr in version: '${package.version}'`);
     main();
 }
