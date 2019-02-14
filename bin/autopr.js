@@ -7,6 +7,12 @@ const package = require('../package.json');
 
 const main = () => {
     run()
+        .then(pr => {
+            console.log(pr);
+            process.exitCode = 0;
+            process.pr.title=pr.title;
+            process.pr.url=pr.html_url;
+        })
         .catch(e => {
             if (e instanceof ErrorWithExitCode) {
                 process.exitCode = e.getExitCode();
@@ -16,7 +22,7 @@ const main = () => {
                 console.error(e);
             }
         }).finally(() => {
-            console.log(`Process exited with code: '${process.exitCode || 0}'`);
+            console.log(`Process exited with code: '${process.exitCode}'`);
         })
 }
 if (require.main === module) {
