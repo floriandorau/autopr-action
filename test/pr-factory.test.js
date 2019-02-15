@@ -30,7 +30,7 @@ describe('createPullRequest', () => {
         };
 
         const result = createPullRequest(data);
-        expect(result.title).toMatch('WiP: Misc Feature branch');
+        expect(result.title).toMatch('WiP Misc Feature branch');
         expect(result.head).toMatch('misc_feature-branch');
         expect(result.base).toMatch('master');
         expect(result.body).toBeDefined();

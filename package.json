@@ -1,6 +1,6 @@
 {
   "name": "autopr-action",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Github action for auto-creating pull requests",
   "main": "index.js",
   "scripts": {
