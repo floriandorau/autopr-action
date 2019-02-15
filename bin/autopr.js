@@ -10,8 +10,10 @@ const main = () => {
         .then(pr => {
             console.log(pr);
             process.exitCode = 0;
-            process.pr.title=pr.title;
-            process.pr.url=pr.html_url;
+            process.env.pr = {
+                title: pr.title,
+                url: pr.html_url
+            };
         })
         .catch(e => {
             if (e instanceof ErrorWithExitCode) {
