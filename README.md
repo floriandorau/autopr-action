@@ -1,6 +1,5 @@
 # autopr-action #
 
---
 
 Github action to automatically create pull request for newly pushed branches.
 
